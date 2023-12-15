@@ -1,8 +1,18 @@
+/* General */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: Sport;
+}
+
+@font-face {
+    font-family: 'Sport';
+    src: url('../assets/font/Race\ Sport.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 
 html {
@@ -13,7 +23,7 @@ html {
 /* Navbar y medidas */
 
 .navbar {
-    height: 70px;
+    height: 180px;
 }
 
 .navbar-top {
@@ -44,7 +54,11 @@ html {
 }
 
 .bg-navbar {
-    background: #0d1b3a;
+    background: #212041;
+}
+
+.bg-transparent {
+    background: transparent;
 }
 
 .hover-rosa {
@@ -58,7 +72,7 @@ html {
 /* Footer */
 
 .background-dark {
-    background: #131616;
+    background: no-repeat center/100% url("../assets/images/degradado.jpeg");
 }
 
 .texto-animado {
