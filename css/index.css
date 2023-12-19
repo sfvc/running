@@ -20,21 +20,30 @@ html {
     max-width: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e53a8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1c3c81c5;
+}
+
+.bg-main {
+    background-color: white;
+}
+
 /* Navbar y medidas */
 
 .navbar {
-    height: 180px;
+    height: 100px;
 }
 
 .navbar-top {
     border-radius: 0;
-}
-
-.navbar-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 .nav-item {
@@ -54,19 +63,56 @@ html {
 }
 
 .bg-navbar {
-    background: #212041;
+    background: #000;
 }
 
 .bg-transparent {
     background: transparent;
 }
 
-.hover-rosa {
+.hover-navbar {
     transition: color 0.6s ease;
 }
 
-.hover-rosa:hover {
-    color: pink;
+.hover-navbar:hover {
+    color: #3fc5ec;
+}
+
+.hover-navbar {
+    position: relative;
+    transition: 0.5s;
+}
+
+.hover-navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: #8bcc27;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.hover-navbar:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.titulos {
+    color: #1e53a8;
+}
+
+.textos-largos {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: large;
+}
+
+.trails {
+    width: 40rem;
 }
 
 /* Footer */
