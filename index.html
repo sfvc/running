@@ -92,10 +92,27 @@
             <img src="./assets/images/Dique.jpg" class="w-full h-full" alt="">
         </legend>
 
-        <!-- Separador -->
+        <h3 class="text-center mt-4 rainbow-text">
+            Tiempo restante para la carrera
+        </h3>
 
-        <div style="margin-top: 38em;">
-
+        <div class="flex gap-8 justify-center mt-4 mb-4">
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <span class="font-bold">Días:</span>
+                <span id="days" class="ml-2 text-blue-500"></span>
+            </div>
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <span class="font-bold">Horas:</span>
+                <span id="hours" class="ml-2 text-blue-500"></span>
+            </div>
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <span class="font-bold">Minutos:</span>
+                <span id="minutes" class="ml-2 text-blue-500"></span>
+            </div>
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <span class="font-bold">Segundos:</span>
+                <span id="seconds" class="ml-2 text-blue-500"></span>
+            </div>
         </div>
 
         <!-- Footer -->
@@ -172,8 +189,47 @@
         </footer>
     </main>
 
+
+    <script>
+        function countdown() {
+            const today = new Date();
+            const targetDate = new Date('2024-03-16');
+            const difference = targetDate.getTime() - today.getTime();
+
+            if (difference <= 0) {
+                return {
+                    days: 0,
+                    hours: 0,
+                    minutes: 0,
+                    seconds: 0
+                };
+            } else {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                return { days, hours, minutes, seconds };
+            }
+        }
+
+        function updateCountdown() {
+            const countdownResult = countdown();
+
+            document.getElementById('days').textContent = countdownResult.days;
+            document.getElementById('hours').textContent = countdownResult.hours;
+            document.getElementById('minutes').textContent = countdownResult.minutes;
+            document.getElementById('seconds').textContent = countdownResult.seconds;
+        }
+
+        // Actualiza la cuenta regresiva cada segundo
+        setInterval(updateCountdown, 1000);
+
+        // Inicializa la cuenta regresiva al cargar la página
+        updateCountdown();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
