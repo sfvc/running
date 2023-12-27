@@ -133,3 +133,22 @@ html {
     animation: textclip 4s linear infinite;
     text-align: center;
 }
+
+/* .rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-animation 10s infinite linear;
+    background-size: 200% 100%;
+}
+
+@keyframes rainbow-animation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+} */
