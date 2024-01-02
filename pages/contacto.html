@@ -69,7 +69,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="./cronograma.html"
                             class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Cronograma</a>
                     </li>
                     <li>
@@ -78,7 +78,7 @@
                             útil</a>
                     </li>
                     <li>
-                        <a href="./contacto.html"
+                        <a href="#"
                             class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Contacto</a>
                     </li>
                 </ul>
@@ -86,82 +86,32 @@
         </div>
     </nav>
 
-    <section class="container mx-auto">
-        <div>
-            <h1 class="mt-8 flex justify-center items-center text-center text-2xl md:text-4xl">
-                CRONOGRAMA DE LA CARRERA
-            </h1>
-        </div>
-    
-        <div class="flex justify-center items-center">
-            <div class="px-4 mb-4 mt-4">
-                <img src="../assets/images/cronograma.jpeg" alt="Circuito de 7KM">
+    <div class="max-w-md mx-auto bg-white rounded p-6 shadow-md mt-8 mb-8">
+        <h2 class="text-2xl font-bold mb-6">Formulario de Contacto</h2>
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500" required>
             </div>
-        </div>
-    
-        <div class="flex justify-center items-center container">
-            <section class="container px-8 flex flex-col text-center">
-    
-                <!-- Seccion 1 -->
-    
-                <p class="mt-4 titulos">
-                    VIERNES 14 DE MARZO:
-                </p>
-    
-                <p class="textos-largos mt-1">
-                    08:00 a 20:00hs. Acreditacion de todas las distancias.
-                </p>
-    
-                <!-- Seccion 2 -->
-    
-                <p class="mt-4 titulos">
-                    SABADO 15 DE MARZO:
-                </p>
-    
-                <p class="textos-largos mt-1">
-                    08:00 a 19:00hs. Acreditacion de todas las distancias.
-                </p>
-    
-                <p class="textos-largos mt-1">
-                    19:00 a 20:00 Hs Acto de apertura, presentación de corredores Elite.
-                </p>
-    
-                <!-- Seccion 3 -->
-    
-                <p class="mt-4 titulos">
-                    DOMINGO 16 DE MARZO:
-                </p>
-    
-                <p class="textos-largos mt-1">
-                    Lugar: Dique El Jumeal, Parque de los Vientos - San Fernando del Valle de Catamarca.
-                </p>
-    
-                <p class="textos-largos mt-1">
-                    14:30 Hs. Largada 7,9Km.
-                </p>
-    
-                <p class="textos-largos mt-1">
-                    16:30 Hs. Largada Carrera Campeonato Nacional Classic 15Km.
-                </p>
-    
-                <p class="textos-largos mt-1">
-                    18:00 Hs. Entrega de premios y ceremonia de cierre.
-                </p>
-            </section>
-        </div>
-    
-        <div class="justify-center flex p-8">
-            <a href="#"
-                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                Inscribirse
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9" />
-                </svg>
-            </a>
-        </div>
-    </section>
+            <div class="mb-4">
+                <label for="apellido" class="block text-gray-700 font-bold mb-2">Apellido</label>
+                <input type="text" id="apellido" name="apellido" class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="telefono" class="block text-gray-700 font-bold mb-2">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
+                <input type="email" id="email" name="email" class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="mensaje" class="block text-gray-700 font-bold mb-2">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 h-32 resize-none" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar</button>
+        </form>
+    </div>
 
     <!-- Footer -->
 
@@ -184,7 +134,8 @@
             </div>
             <hr>
             <p class="text-center py-4 textos-largos">
-                Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad de San Fernando Del Valle de Catamarca.
+                Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad de San
+                Fernando Del Valle de Catamarca.
             </p>
         </div>
     </footer>
@@ -192,7 +143,7 @@
 
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 <script src="../js/index.js"></script>
 </body>
