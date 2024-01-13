@@ -55,7 +55,7 @@ html {
 /* Navbar y medidas */
 
 .navbar {
-    height: 130px;
+    height: 270px;
 }
 
 .navbar-top {
@@ -79,7 +79,7 @@ html {
 }
 
 .bg-navbar {
-    background: #000;
+    background: #002553;
 }
 
 .bg-transparent {
@@ -139,6 +139,8 @@ html {
 
 .background-dark {
     background: no-repeat center/100% url("../assets/images/degradado.jpeg");
+    width: 100%;
+    height: 100%;
 }
 
 .texto-animado {

@@ -16,14 +16,16 @@
 <main class="bg-main">
     <!-- Navbar -->
 
-    <nav class="navbar navbar-top navbar-default bg-navbar fixed w-full z-20 top-0 start-0 sticky">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+    <nav class="navbar navbar-top navbar-default bg-navbar w-full text-sm">
+        <div class="flex justify-center items-center">
             <a href="../index.html">
-                <img src="../assets/images/logo_laCapitalTrail.png" alt="La Capital Trail" class="w-32 h-auto lg:block">
+                <img src="../assets/images/logo_laCapitalTrail.png" alt="La Capital Trail" class="w-56 h-auto lg:block">
             </a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center mx-auto">
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
                 <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500  md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 mr-3"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 mr-3"
                     aria-controls="navbar-sticky" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -35,7 +37,7 @@
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul
-                    class="bg-main flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 bg-navbar">
+                    class="bg-main flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 bg-navbar">
                     <li>
                         <a href="./inscripciones.html"
                             class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Inscripciones</a>
@@ -43,8 +45,7 @@
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
                             class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover-navbar md:p-0 md:w-auto md:dark:hover:text-blue-500 dark:focus dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent mt-1 hover-navbar text-white">
-                            Campeonato
-                            Nacional
+                            Circuitos
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -58,7 +59,7 @@
                                 <li>
                                     <a href="./circuito7km.html"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CIRCUITO
-                                        7.9KM</a>
+                                        7,5KM</a>
                                 </li>
                                 <li>
                                     <a href="./circuito15km.html"
@@ -69,13 +70,23 @@
                         </div>
                     </li>
                     <li>
+                        <a href="./campeonato.html"
+                            class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Campeonato
+                            Nacional</a>
+                    </li>
+                    <li>
                         <a href="#"
                             class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Cronograma</a>
                     </li>
                     <li>
+                        <a href="./preguntas.html"
+                            class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Preguntas
+                            Frecuentes</a>
+                    </li>
+                    <li>
                         <a href="./informacion.html"
                             class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Información
-                            útil</a>
+                            Útil</a>
                     </li>
                     <li>
                         <a href="./contacto.html"
@@ -92,64 +103,64 @@
                 CRONOGRAMA DE LA CARRERA
             </h1>
         </div>
-    
+
         <div class="flex justify-center items-center">
             <div class="px-4 mb-4 mt-4">
                 <img src="../assets/images/cronograma.jpeg" alt="Circuito de 7KM">
             </div>
         </div>
-    
+
         <div class="flex justify-center items-center container">
             <section class="container px-8 flex flex-col text-center">
-    
+
                 <!-- Seccion 1 -->
-    
+
                 <p class="mt-4 titulos">
                     VIERNES 14 DE MARZO:
                 </p>
-    
+
                 <p class="textos-largos mt-1">
                     08:00 a 20:00hs. Acreditacion de todas las distancias.
                 </p>
-    
+
                 <!-- Seccion 2 -->
-    
+
                 <p class="mt-4 titulos">
                     SABADO 15 DE MARZO:
                 </p>
-    
+
                 <p class="textos-largos mt-1">
                     08:00 a 19:00hs. Acreditacion de todas las distancias.
                 </p>
-    
+
                 <p class="textos-largos mt-1">
                     19:00 a 20:00 Hs Acto de apertura, presentación de corredores Elite.
                 </p>
-    
+
                 <!-- Seccion 3 -->
-    
+
                 <p class="mt-4 titulos">
                     DOMINGO 16 DE MARZO:
                 </p>
-    
+
                 <p class="textos-largos mt-1">
                     Lugar: Dique El Jumeal, Parque de los Vientos - San Fernando del Valle de Catamarca.
                 </p>
-    
+
                 <p class="textos-largos mt-1">
                     14:30 Hs. Largada 7,9Km.
                 </p>
-    
+
                 <p class="textos-largos mt-1">
                     16:30 Hs. Largada Carrera Campeonato Nacional Classic 15Km.
                 </p>
-    
+
                 <p class="textos-largos mt-1">
                     18:00 Hs. Entrega de premios y ceremonia de cierre.
                 </p>
             </section>
         </div>
-    
+
         <div class="justify-center flex p-8">
             <a href="#"
                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
@@ -184,7 +195,8 @@
             </div>
             <hr>
             <p class="text-center py-4 textos-largos">
-                Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad de San Fernando Del Valle de Catamarca.
+                Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad de San
+                Fernando Del Valle de Catamarca.
             </p>
         </div>
     </footer>
