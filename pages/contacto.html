@@ -99,22 +99,22 @@
 
     <div class="max-w-md mx-auto bg-white rounded p-6 shadow-md mt-8 mb-8">
         <h2 class="text-2xl font-bold mb-6">Formulario de Contacto</h2>
-        <form action="#" method="POST">
+        <form action="#" method="" id="form">
             <div class="mb-4">
-                <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre</label>
-                <input type="text" id="nombre" name="nombre"
+                <label for="name" class="block text-gray-700 font-bold mb-2">Nombre</label>
+                <input type="text" id="name" name="name"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
                     required>
             </div>
             <div class="mb-4">
-                <label for="apellido" class="block text-gray-700 font-bold mb-2">Apellido</label>
-                <input type="text" id="apellido" name="apellido"
+                <label for="surname" class="block text-gray-700 font-bold mb-2">Apellido</label>
+                <input type="text" id="surname" name="surname"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
                     required>
             </div>
             <div class="mb-4">
-                <label for="telefono" class="block text-gray-700 font-bold mb-2">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono"
+                <label for="phone" class="block text-gray-700 font-bold mb-2">Teléfono</label>
+                <input type="tel" id="phone" name="phone"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
                     required>
             </div>
@@ -125,38 +125,38 @@
                     required>
             </div>
             <div class="mb-4">
-                <label for="mensaje" class="block text-gray-700 font-bold mb-2">Mensaje</label>
-                <textarea id="mensaje" name="mensaje"
+                <label for="message" class="block text-gray-700 font-bold mb-2">Mensaje</label>
+                <textarea id="message" name="message"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 h-32 resize-none"
                     required></textarea>
             </div>
-            <button type="submit"
+            <button type="submit" id="button"
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline justify-end">Enviar</button>
         </form>
     </div>
 
     <!-- Footer -->
 
-    <footer class="background-dark mt-4">
+    <footer class="background-dark mt-4 w-full h-full">
         <div class="mx-auto w-full max-w-screen-xl">
-            <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold text-indigo-700 uppercase">Contacto</h2>
-                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                        <li class="mb-4">
-                            <a href="https://www.instagram.com/lacapital.trail.ok/?hl=es-la"
-                                class="hover:underline text-white">Instagram</a>
-                        </li>
-                        <li>
-                            <a href="mailto:deporteyjuventud.catamarca@gmail.com" class="hover:underline text-white">Tu
-                                Capital Trail</a>
-                        </li>
-                    </ul>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-wrap justify-between items-center">
+                    <!-- Logos aquí, cada uno dentro de un contenedor div -->
+                    <div class="m-4 hidden md:block">
+                        <img src="../assets/images/logo_ASOCAT.png" alt="Logo 1" class="w-32 h-32">
+                    </div>
+                    <div class="m-4">
+                        <img src="../assets/images/logo_CATACAPI.png" alt="Logo 2" class="w-44 h-44">
+                    </div>
+                    <div class="m-4">
+                        <img src="../assets/images/logo_TRAIL.png" alt="Logo 3" class="w-32 h-32">
+                    </div>
                 </div>
             </div>
             <hr>
             <p class="text-center py-4 textos-largos">
-                Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad de San
+                Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad
+                de San
                 Fernando Del Valle de Catamarca.
             </p>
         </div>
@@ -166,6 +166,12 @@
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script src="../js/email.js" type="text/JavaScript"></script>
+
+<!-- EMAILJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">(function(){emailjs.init("u1HZcSHJOPhUccD57");})();</script>
+<!-- Flowbite -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 <script src="../js/index.js"></script>
 </body>
