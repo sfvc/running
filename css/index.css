@@ -52,6 +52,10 @@ html {
     background-color: white;
 }
 
+@media (hover: none) {
+    
+}
+
 /* Navbar y medidas */
 
 .navbar {
@@ -141,6 +145,11 @@ html {
     background: no-repeat center/100% url("../assets/images/degradado.jpeg");
     width: 100%;
     height: 100%;
+}
+
+.bg-muni {
+    background: #020024;
+    background: linear-gradient(90deg, #6d8ae7 37%, #6176a3 65%);
 }
 
 .texto-animado {
