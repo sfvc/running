@@ -99,40 +99,45 @@
 
     <div class="max-w-md mx-auto bg-white rounded p-6 shadow-md mt-8 mb-8">
         <h2 class="text-2xl font-bold mb-6">Formulario de Contacto</h2>
-        <form action="#" method="" id="form">
+        <form action="#" method="" id="form" class="flex flex-col">
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 font-bold mb-2">Nombre</label>
                 <input type="text" id="name" name="name"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 textos-largos">
+                    <div id="name-alert" class="text-red-600 text-sm mt-1 hidden">¡Este campo es obligatorio!</div>
             </div>
             <div class="mb-4">
                 <label for="surname" class="block text-gray-700 font-bold mb-2">Apellido</label>
                 <input type="text" id="surname" name="surname"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 textos-largos">
+                    <div id="surname-alert" class="text-red-600 text-sm mt-1 hidden">¡Este campo es obligatorio!</div>
             </div>
             <div class="mb-4">
                 <label for="phone" class="block text-gray-700 font-bold mb-2">Teléfono</label>
-                <input type="tel" id="phone" name="phone"
+                <input type="number" id="phone" name="phone"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 textos-largos">
+                    <div id="phone-alert" class="text-red-600 text-sm mt-1 hidden">¡Este campo es obligatorio!</div>
             </div>
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
                 <input type="email" id="email" name="email"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 textos-largos">
+                    <div id="email-alert" class="text-red-600 text-sm mt-1 hidden">¡Este campo es obligatorio!</div>
             </div>
             <div class="mb-4">
                 <label for="message" class="block text-gray-700 font-bold mb-2">Mensaje</label>
                 <textarea id="message" name="message"
                     class="w-full border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 h-32 resize-none textos-largos"></textarea>
+                    <div id="message-alert" class="text-red-600 text-sm mt-1 hidden">¡Este campo es obligatorio!</div>
             </div>
             <button type="submit" id="button"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline justify-end">
-                Enviar
-            </button>
-        </form>
-        <div id="alert-container">
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Enviar
+        </button>
+        
+        <div id="alert-container"></div>
 
-        </div>
+        </form>
     </div>
 
     <!-- Footer -->
@@ -161,7 +166,6 @@
             </div>
         </div>
     </footer>
-    <hr>
     <p class="text-center py-4 textos-largos bg-muni">
         Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad
         de San

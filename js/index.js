@@ -1,5 +1,3 @@
-// EmailJS
-
 const btn = document.getElementById('button');
 const alertContainer = document.getElementById('alert-container');
 const nameInput = document.getElementById('name');
@@ -56,26 +54,58 @@ document.getElementById('form').addEventListener('submit', function (event) {
             // Agregar el alert al contenedor
             alertContainer.appendChild(errorAlert);
         });
-
-
-    function validateForm() {
-        // Verificar campos vacíos
-        if (nameInput.value.trim() === '' || surnameInput.value.trim() === '' || phoneInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
-            // Mostrar mensaje de error o realizar la acción que desees
-            const errorAlert = document.createElement('div');
-            errorAlert.className = 'p-4 mb-4 mt-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800';
-            errorAlert.setAttribute('role', 'alert');
-            errorAlert.innerHTML = '<span class="font-medium">¡Error! Rellena los campos que faltan y vuelve a intentarlo.</span>';
-
-            // Limpiar el contenedor de alertas antes de agregar uno nuevo
-            alertContainer.innerHTML = '';
-
-            // Agregar el alert al contenedor
-            alertContainer.appendChild(errorAlert);
-
-            return false;
-        }
-
-        return true;
-    }
 });
+
+function validateForm() {
+    let formIsValid = true;
+
+    // Verificar campos vacíos
+    if (nameInput.value.trim() === '') {
+        displayAlert('name-alert', '¡El campo "Nombre" es obligatorio!');
+        formIsValid = false;
+    } else {
+        hideAlert('name-alert');
+    }
+
+    if (surnameInput.value.trim() === '') {
+        displayAlert('surname-alert', '¡El campo "Apellido" es obligatorio!');
+        formIsValid = false;
+    } else {
+        hideAlert('surname-alert');
+    }
+
+    if (phoneInput.value.trim() === '') {
+        displayAlert('phone-alert', '¡El campo "Teléfono" es obligatorio!');
+        formIsValid = false;
+    } else {
+        hideAlert('phone-alert');
+    }
+
+    if (emailInput.value.trim() === '') {
+        displayAlert('email-alert', '¡El campo "Correo Electrónico" es obligatorio!');
+        formIsValid = false;
+    } else {
+        hideAlert('email-alert');
+    }
+
+    if (messageInput.value.trim() === '') {
+        displayAlert('message-alert', '¡El campo "Mensaje" es obligatorio!');
+        formIsValid = false;
+    } else {
+        hideAlert('message-alert');
+    }
+
+    return formIsValid;
+}
+
+function displayAlert(alertId, message) {
+    const alertElement = document.getElementById(alertId);
+    alertElement.innerText = message;
+    alertElement.classList.remove('hidden');
+}
+
+function hideAlert(alertId) {
+    const alertElement = document.getElementById(alertId);
+    alertElement.innerText = '';
+    alertElement.classList.add('hidden');
+}
