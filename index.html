@@ -155,7 +155,7 @@
             El Jumeal - Catamarca
         </h2>
 
-        <h3 id="countdown-message" class="text-center mt-4 rainbow-text text-3xl">
+        <h3 class="text-center mt-4 rainbow-text text-3xl">
             Tiempo restante para la carrera
         </h3>
 
@@ -179,7 +179,7 @@
                         <span class="font-bold">Segundos</span>
                     </div>
                 </div>
-                <div id="event-message"
+                <div style="display: none;" id="event-message"
                     class="bg-yellow-500 text-white p-6 rounded-md shadow-md mt-4 text-center rainbow-text-inverse">
                     <p class="font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Hoy es el día de la carrera!!!</p>
                 </div>
@@ -300,33 +300,39 @@
 
         function updateCountdown() {
             const countdownResult = countdown();
+            const today = new Date();
 
-            if (countdownResult.eventPassed) {
-                // La fecha del evento ya pasó, muestra el mensaje correspondiente
+            // Verifica si es el día del evento
+            if (today.getDate() === 16 && today.getMonth() === 2 && today.getFullYear() === 2024) {
+                // Muestra el mensaje porque es el día del evento
+                document.getElementById('event-message').style.display = 'block';
                 document.getElementById('countdown').style.display = 'none';
-                document.getElementById('event-message').style.display = 'none'; // Oculta el mensaje del evento futuro
-                document.getElementById('event-past-message').style.display = 'block'; // Muestra el mensaje del evento pasado
-                document.getElementById('countdown-message').style.display = 'none'; // Oculta el mensaje de tiempo restante
+                document.getElementById('countdown-message').style.display = 'none';
+                document.getElementById('event-past-message').style.display = 'none';
             } else {
-                // La fecha del evento aún no ha llegado
-                if (countdownResult.days === 0) {
-                    // Es el día del evento, oculta la cuenta regresiva y el mensaje de tiempo restante
+                // Actualiza la cuenta regresiva según la lógica anterior
+                if (countdownResult.eventPassed) {
                     document.getElementById('countdown').style.display = 'none';
+                    document.getElementById('event-message').style.display = 'none';
+                    document.getElementById('event-past-message').style.display = 'block';
                     document.getElementById('countdown-message').style.display = 'none';
                 } else {
-                    // No es el día del evento, muestra la cuenta regresiva y el mensaje de tiempo restante
-                    document.getElementById('countdown').style.display = 'flex';
-                    document.getElementById('countdown-message').style.display = 'block';
+                    if (countdownResult.days === 0) {
+                        document.getElementById('countdown').style.display = 'none';
+                        document.getElementById('countdown-message').style.display = 'none';
+                    } else {
+                        document.getElementById('countdown').style.display = 'flex';
+                        document.getElementById('countdown-message').style.display = 'block';
+                    }
+
+                    document.getElementById('event-message').style.display = 'block';
+                    document.getElementById('event-past-message').style.display = 'none';
+
+                    document.getElementById('days').textContent = countdownResult.days;
+                    document.getElementById('hours').textContent = countdownResult.hours;
+                    document.getElementById('minutes').textContent = countdownResult.minutes;
+                    document.getElementById('seconds').textContent = countdownResult.seconds;
                 }
-
-                document.getElementById('event-message').style.display = 'block';
-                document.getElementById('event-past-message').style.display = 'none'; // Oculta el mensaje del evento pasado
-
-                // Actualiza la cuenta regresiva
-                document.getElementById('days').textContent = countdownResult.days;
-                document.getElementById('hours').textContent = countdownResult.hours;
-                document.getElementById('minutes').textContent = countdownResult.minutes;
-                document.getElementById('seconds').textContent = countdownResult.seconds;
             }
         }
 
