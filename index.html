@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nahuel Soria Parodi">
     <!-- favicon -->
-    <link rel="shortcut icon" type="./image/png" href="./assets/images/logo_laCapitalTrail.png">
+    <link rel="shortcut icon" type="./image/png" href="./assets/images/logo_TRAIL.png">
     <!-- TailwindCSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <!-- CSS -->
@@ -101,7 +101,7 @@
             </div>
         </nav>
 
-        <div id="default-carousel" class="relative w-full z-0" data-carousel="slide">
+        <div id="default-carousel" class="relative w-full z-0 hidden md:block" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative overflow-hidden w-full h-96 z-0">
                 <div class="hidden duration-700 ease-in absolute inset-0" data-carousel-item>
@@ -242,24 +242,29 @@
                     <div class="flex flex-wrap justify-between items-center">
                         <!-- Logos aquí, cada uno dentro de un contenedor div -->
                         <div class="m-4">
-                            <img src="./assets/images/logo_ASOCAT.png" alt="Logo ASOCAR" class="w-32 h-32">
+                            <img src="../assets/images/logo_ASOCAT.png" alt="Logo ASOCAT" class="w-32 h-32">
                         </div>
                         <div class="m-4">
-                            <img src="./assets/images/logo_CATACAPI.png" alt="Logo CATAMARCA CAPITAL" class="w-44 h-44">
+                            <img src="../assets/images/logo_CATACAPI.png" alt="Logo CATAMARCA CAPITAL" class="w-44 h-44">
                         </div>
                         <div class="m-4 hidden md:block">
-                            <img src="./assets/images/logo_TRAIL.png" alt="Logo TRAIL" class="w-32 h-32">
+                            <img src="../assets/images/logo_TRAIL.png" alt="Logo TRAIL" class="w-32 h-32">
+                        </div>
+                        <div class="m-4">
+                            <img src="../assets/images/logo_CATAGOB.png" alt="Logo CATAMARCA GOBIERNO" class="w-44 h-44">
+                        </div>
+                        <div class="m-4">
+                            <img src="../assets/images/logo_CADA.png" alt="Logo CADA" class="w-32 h-32">
                         </div>
                     </div>
                 </div>
-                <hr>
-                <p class="text-center py-4 textos-largos">
-                    Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad
-                    de San
-                    Fernando Del Valle de Catamarca.
-                </p>
             </div>
         </footer>
+        <p class="text-center py-4 textos-largos bg-muni">
+            Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad
+            de San
+            Fernando Del Valle de Catamarca.
+        </p>
     </main>
 
     <script>
