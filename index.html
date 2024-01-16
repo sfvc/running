@@ -155,7 +155,7 @@
             El Jumeal - Catamarca
         </h2>
 
-        <h3 class="text-center mt-4 rainbow-text text-3xl">
+        <h3 id="countdown-message" class="text-center mt-4 rainbow-text text-3xl">
             Tiempo restante para la carrera
         </h3>
 
@@ -302,36 +302,40 @@
             const countdownResult = countdown();
             const today = new Date();
 
-            // Verifica si es el día del evento
-            if (today.getDate() === 16 && today.getMonth() === 2 && today.getFullYear() === 2024) {
-                // Muestra el mensaje porque es el día del evento
-                document.getElementById('event-message').style.display = 'block';
+            // Verifica si el evento ya pasó
+            if (countdownResult.eventPassed) {
                 document.getElementById('countdown').style.display = 'none';
                 document.getElementById('countdown-message').style.display = 'none';
-                document.getElementById('event-past-message').style.display = 'none';
+                document.getElementById('event-message').style.display = 'none';
+                document.getElementById('event-past-message').style.display = 'block';
             } else {
-                // Actualiza la cuenta regresiva según la lógica anterior
-                if (countdownResult.eventPassed) {
+                // Verifica si es el día del evento
+                if (today.getDate() === 16 && today.getMonth() === 2 && today.getFullYear() === 2024) {
+                    // Muestra el mensaje del evento porque es el día del evento
+                    document.getElementById('event-message').style.display = 'block';
                     document.getElementById('countdown').style.display = 'none';
-                    document.getElementById('event-message').style.display = 'none';
-                    document.getElementById('event-past-message').style.display = 'block';
                     document.getElementById('countdown-message').style.display = 'none';
+                    document.getElementById('event-past-message').style.display = 'none';
                 } else {
-                    if (countdownResult.days === 0) {
+                    // Verifica si el evento aún no ha pasado
+                    if (countdownResult.eventPassed) {
+                        // Muestra el mensaje de que la carrera ya ha pasado
                         document.getElementById('countdown').style.display = 'none';
                         document.getElementById('countdown-message').style.display = 'none';
+                        document.getElementById('event-message').style.display = 'none';
+                        document.getElementById('event-past-message').style.display = 'block';
                     } else {
+                        // Mostrar el mensaje de cuenta regresiva
                         document.getElementById('countdown').style.display = 'flex';
                         document.getElementById('countdown-message').style.display = 'block';
+                        document.getElementById('event-message').style.display = 'none';
+                        document.getElementById('event-past-message').style.display = 'none';
+
+                        document.getElementById('days').textContent = countdownResult.days;
+                        document.getElementById('hours').textContent = countdownResult.hours;
+                        document.getElementById('minutes').textContent = countdownResult.minutes;
+                        document.getElementById('seconds').textContent = countdownResult.seconds;
                     }
-
-                    document.getElementById('event-message').style.display = 'block';
-                    document.getElementById('event-past-message').style.display = 'none';
-
-                    document.getElementById('days').textContent = countdownResult.days;
-                    document.getElementById('hours').textContent = countdownResult.hours;
-                    document.getElementById('minutes').textContent = countdownResult.minutes;
-                    document.getElementById('seconds').textContent = countdownResult.seconds;
                 }
             }
         }
