@@ -115,56 +115,95 @@
                 </h1>
             </div>
 
+            <div
+                class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-4">
+                <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse"
+                    id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+                    <li class="w-full">
+                        <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats"
+                            aria-selected="true"
+                            class="inline-block w-full p-4 rounded-ss-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Estadisticas</button>
+                    </li>
+                </ul>
+                <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
+                    <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel"
+                        aria-labelledby="stats-tab">
+                        <dl
+                            class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
+                            <div class="flex flex-col items-center justify-center">
+                                <dt class="mb-2 text-3xl font-extrabold">7,5KM</dt>
+                                <dd class="text-gray-500 dark:text-gray-400">Distancia</dd>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <dt class="mb-2 text-3xl font-extrabold">366</dt>
+                                <dd class="text-gray-500 dark:text-gray-400">Desnivel +</dd>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <dt class="mb-2 text-3xl font-extrabold">366</dt>
+                                <dd class="text-gray-500 dark:text-gray-400">Desnivel -</dd>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <dt class="mb-2 text-3xl font-extrabold">1,5KM</dt>
+                                <dd class="text-gray-500 dark:text-gray-400">PA - 1</dd>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <dt class="mb-2 text-3xl font-extrabold">5,5KM</dt>
+                                <dd class="text-gray-500 dark:text-gray-400">PA - 2</dd>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <dt class="mb-2 text-3xl font-extrabold">4M+</dt>
+                                <dd class="text-gray-500 dark:text-gray-400">Organizations</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 mt-6 hidden md:grid">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="../assets/images/banner_7KM.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="../assets/images/altimetria_7KM.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="../assets/images/codigoQR.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="flex flex-col flex-wrap gap-2 mt-6 grid-flow-row-dense md:hidden">
+                <div>
+                    <img class="h-auto max-w-full"
+                        src="../assets/images/banner_7KM.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full"
+                        src="../assets/images/altimetria_7KM.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full"
+                        src="../assets/images/codigoQR.jpg" alt="">
+                </div>
+            </div>
+
             <div class="flex justify-center items-center">
                 <section class="container px-8 flex flex-col text-center">
                     <section>
-                        <h3 class="mt-3 justify-center text-lg px-8">
-                            <span class="titulos">Lugar de largada y llegada:</span> Parque de los vientos - San
-                            Fernando
-                            del
-                            Valle de Catamarca.
-                        </h3>
-                    </section>
-
-                    <section>
-                        <h3 class="mt-3 justify-center text-lg px-8">
-                            <span class="titulos">Coordenadas de ubicación:</span> 28°27 '41.22"S, 65°48' 42.00"O
-                        </h3>
-                    </section>
-
-                    <section>
-                        <h3 class="mt-3 justify-center text-lg px-8">
-                            <span class="titulos">Distancia:</span> 7,5 km
-                        </h3>
-                    </section>
-
-                    <section>
-                        <h3 class="mt-3 justify-center text-lg px-8">
-                            <span class="titulos">Desnivel +:</span> 366m.
-                        </h3>
-                    </section>
-
-                    <section>
-                        <h3 class="mt-3 justify-center text-lg px-8">
-                            <span class="titulos">Desnivel -:</span> 366m.
-                        </h3>
-                    </section>
-
-                    <section>
-                        <h3 class="mt-3 justify-center text-lg px-8">
-                            <span class="titulos">Puestos de abastecimiento:</span> PA1 - KM 1,5 / PA 2 - KM 5,5.
-                        </h3>
-                    </section>
-
-                    <section>
-                        <h3 class="mt-3 text-center justify-center text-justify text-md px-8 textos-largos">
+                        <p class="mt-3 text-center justify-center text-justify text-md textos-largos">
                             Los 7.5km de “La Capital Trail” largarán el día sábado 16 de marzo a las 14:30h desde el
                             PARQUE
                             DE
                             LOS
                             VIENTOS, ubicado en inmediaciones del DIQUE EL JUMEAL en la ciudad de San Fernando del valle
                             de
-                            Catamarca. La partida se encuentra a 644 msnm sobre el asfalto junto al parque. Se larga
+                            Catamarca.
+                        </p>
+
+                        <p class="mt-3 text-center justify-center text-justify text-md textos-largos">
+                            La partida se encuentra a 644 msnm sobre el asfalto junto al parque. Se larga
                             rumbo a
                             Avenida
                             Illia por asfalto en bajada, son 300 metros por Avenida Illia hasta entrar a mano derecha en
@@ -175,6 +214,9 @@
                             por
                             dentro de una quebrada de 1500 metros de longitud hasta llegar al monumento al aborigen del
                             Jumeal.
+                        </p>
+
+                        <p class="mt-3 text-center justify-center text-justify text-md textos-largos">
                             Una
                             vez allí se conecta con el asfalto y se retoma rumbo al dique El Jumeal hasta “Mirador de la
                             cascada”
@@ -189,7 +231,11 @@
                             hasta
                             el
                             peri
-                            lago y se conecta por el mismo con la subida de las letras. La subida de las letras se
+                            lago y se conecta por el mismo con la subida de las letras.
+                        </p>
+
+                        <p class="mt-3 text-center justify-center text-justify text-md textos-largos">
+                            La subida de las letras se
                             realiza
                             hasta
                             el
@@ -206,14 +252,14 @@
                             por
                             el
                             asfalto se desciende a la llegada.
-                        </h3>
+                        </p>
                     </section>
-
                 </section>
             </div>
 
             <div class="justify-center flex p-8">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScwkHo-BhJowiVY9SFbrU7y-q9_oC1tZRdSCeDMSflHtoj8aQ/viewform" target="_blank"
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScwkHo-BhJowiVY9SFbrU7y-q9_oC1tZRdSCeDMSflHtoj8aQ/viewform"
+                    target="_blank"
                     class="inline-flex items-center text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-5 text-center me-2 mb-2">
                     Inscribirse
                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -232,20 +278,22 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="flex flex-wrap justify-between items-center">
                         <!-- Logos aquí, cada uno dentro de un contenedor div -->
-                        <div class="m-4">
-                            <img src="../assets/images/logo_ASOCAT.png" alt="Logo ASOCAT" class="w-32 h-32">
+                        <div class="m-6">
+                            <img src="../assets/images/logo_CATAGOB.png" alt="Logo CATAMARCA GOBIERNO"
+                                class="w-44 h-44">
                         </div>
-                        <div class="m-4">
-                            <img src="../assets/images/logo_CATACAPI.png" alt="Logo CATAMARCA CAPITAL" class="w-44 h-44">
+                        <div class="m-6">
+                            <img src="../assets/images/logo_CATACAPI.png" alt="Logo CATAMARCA CAPITAL"
+                                class="w-44 h-44">
                         </div>
                         <div class="m-4 hidden md:block">
                             <img src="../assets/images/logo_TRAIL.png" alt="Logo TRAIL" class="w-32 h-32">
                         </div>
-                        <div class="m-4">
-                            <img src="../assets/images/logo_CATAGOB.png" alt="Logo CATAMARCA GOBIERNO" class="w-44 h-44">
-                        </div>
-                        <div class="m-4">
+                        <div class="m-6">
                             <img src="../assets/images/logo_CADA.png" alt="Logo CADA" class="w-32 h-32">
+                        </div>
+                        <div class="m-6">
+                            <img src="../assets/images/logo_ASOCAT.png" alt="Logo ASOCAT" class="w-32 h-32">
                         </div>
                     </div>
                 </div>
@@ -260,7 +308,7 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-      </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <script src="../js/index.js"></script>
 </body>
