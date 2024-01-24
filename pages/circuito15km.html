@@ -8,8 +8,18 @@
     <link rel="shortcut icon" type="./image/png" href="../assets/images/logo_TRAIL.png">
     <!-- TailwindCSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet GPX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/index.css">
+    <style>
+        #map-container {
+            height: 400px;
+        }
+    </style>
     <title>Circuito 15km</title>
 </head>
 
@@ -113,6 +123,8 @@
                 </h1>
             </div>
 
+            <div id="map-container"></div>
+
             <div
                 class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-4">
                 <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse"
@@ -163,31 +175,25 @@
 
             <div class="grid grid-cols-3 gap-2 mt-6 hidden md:grid">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="../assets/images/banner_15KM.jpg" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="../assets/images/banner_15KM.jpg" alt="">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="../assets/images/altimetria_15KM.jpg" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="../assets/images/altimetria_15KM.jpg" alt="">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="../assets/images/codigoQR.jpg" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="../assets/images/codigoQR.jpg" alt="">
                 </div>
             </div>
 
             <div class="flex flex-col flex-wrap gap-2 mt-6 grid-flow-row-dense md:hidden">
                 <div>
-                    <img class="h-auto max-w-full"
-                        src="../assets/images/banner_15KM.jpg" alt="">
+                    <img class="h-auto max-w-full" src="../assets/images/banner_15KM.jpg" alt="">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full"
-                        src="../assets/images/altimetria_15KM.jpg" alt="">
+                    <img class="h-auto max-w-full" src="../assets/images/altimetria_15KM.jpg" alt="">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full"
-                        src="../assets/images/codigoQR.jpg" alt="">
+                    <img class="h-auto max-w-full" src="../assets/images/codigoQR.jpg" alt="">
                 </div>
             </div>
 
@@ -304,6 +310,29 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+        // Espera a que se cargue el DOM
+        document.addEventListener('DOMContentLoaded', function () {
+            // Crea el mapa en el contenedor con ID "map-container"
+            var map = L.map('map-container').setView([0, 0], 2);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            }).addTo(map);
+
+            // Carga el archivo GPX y añádelo al mapa
+            var url = '../assets/documents/LCT15K.gpx'; // URL al archivo GPX 
+            new L.GPX(url, {
+                async: true,
+                marker_options: {
+                    startIconUrl: null,
+                    endIconUrl: null,
+                    shadowUrl: null
+                }
+            }).on('loaded', function (e) {
+                map.fitBounds(e.target.getBounds());
+            }).addTo(map);
+        });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <script src="../js/index.js"></script>
