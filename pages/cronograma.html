@@ -13,155 +13,173 @@
     <title>Cronograma</title>
 </head>
 
-<main class="bg-main">
-    <!-- Navbar -->
-
-    <nav class="navbar navbar-top navbar-default bg-navbar w-full text-sm">
-        <div class="flex justify-center items-center">
-            <a href="../index.html">
-                <img src="../assets/images/logo_laCapitalTrail.png" alt="La Capital Trail" class="w-56 h-auto lg:block">
-            </a>
+<body>
+    <div class="loading-container" id="loading-container">
+        <div role="status">
+            <svg aria-hidden="true" class="w-10 h-10 text-gray-200 animate-spin dark:text-gray-600 fill-purple-600"
+                viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="currentColor" />
+                <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentFill" />
+            </svg>
         </div>
-        <div class="flex flex-wrap items-center justify-center mx-auto">
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
-                <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 mr-3"
-                    aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
+    </div>
+    <main class="bg-main">
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-top navbar-default bg-navbar w-full text-sm">
+            <div class="flex justify-center items-center">
+                <a href="../index.html">
+                    <img src="../assets/images/logo_laCapitalTrail.png" alt="La Capital Trail"
+                        class="w-56 h-auto lg:block">
+                </a>
+            </div>
+            <div class="flex flex-wrap items-center justify-center mx-auto">
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
+                    <button data-collapse-toggle="navbar-sticky" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 mr-3"
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="bg-main flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 bg-navbar">
+                        <li>
+                            <a href="./inscripciones.html"
+                                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Inscripciones</a>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover-navbar md:p-0 md:w-auto md:dark:hover:text-blue-500 dark:focus dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent mt-1 hover-navbar text-white">
+                                Circuitos
+                                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar"
+                                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                                    aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="./circuito7km.html"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CIRCUITO
+                                            7,5KM</a>
+                                    </li>
+                                    <li>
+                                        <a href="./circuito15km.html"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CIRCUITO
+                                            15KM</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./campeonato.html"
+                                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Campeonato
+                                Nacional</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Cronograma</a>
+                        </li>
+                        <li>
+                            <a href="./preguntas.html"
+                                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Preguntas
+                                Frecuentes</a>
+                        </li>
+                        <li>
+                            <a href="./informacion.html"
+                                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Información
+                                Útil</a>
+                        </li>
+                        <li>
+                            <a href="./contacto.html"
+                                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="">
+
+            <div class="grid grid-cols-1 hidden md:grid">
+                <div class="px-4 mb-4 mt-4 flex justify-center items-center text-center">
+                    <img src="../assets/images/cronograma2.jpg" alt="Cronograma">
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center md:hidden">
+                <div class=" mb-4 mt-4">
+                    <img src="../assets/images/cronograma.jpg" alt="Cronograma">
+                </div>
+            </div>
+
+            <div class="justify-center flex p-8">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7mDS7C7iX5wrhOY-0ZhcVHJKWj3IS_efLHQs5y2MFhP-Mog/viewform"
+                    target="_blank"
+                    class="inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-5 text-center me-2 mb-2">
+                    Inscribirse
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
-                </button>
+                </a>
             </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul
-                    class="bg-main flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 bg-navbar">
-                    <li>
-                        <a href="./inscripciones.html"
-                            class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Inscripciones</a>
-                    </li>
-                    <li>
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover-navbar md:p-0 md:w-auto md:dark:hover:text-blue-500 dark:focus dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent mt-1 hover-navbar text-white">
-                            Circuitos
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg></button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownNavbar"
-                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                                aria-labelledby="dropdownLargeButton">
-                                <li>
-                                    <a href="./circuito7km.html"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CIRCUITO
-                                        7,5KM</a>
-                                </li>
-                                <li>
-                                    <a href="./circuito15km.html"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CIRCUITO
-                                        15KM</a>
-                                </li>
-                            </ul>
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="background-dark mt-4 w-full h-full">
+            <div class="mx-auto w-full max-w-screen-xl">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-wrap justify-between items-center">
+                        <!-- Logos aquí, cada uno dentro de un contenedor div -->
+                        <div class="m-6">
+                            <img src="../assets/images/logo_CATAGOB.png" alt="Logo CATAMARCA GOBIERNO"
+                                class="w-44 h-44">
                         </div>
-                    </li>
-                    <li>
-                        <a href="./campeonato.html"
-                            class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Campeonato
-                            Nacional</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Cronograma</a>
-                    </li>
-                    <li>
-                        <a href="./preguntas.html"
-                            class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Preguntas
-                            Frecuentes</a>
-                    </li>
-                    <li>
-                        <a href="./informacion.html"
-                            class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Información
-                            Útil</a>
-                    </li>
-                    <li>
-                        <a href="./contacto.html"
-                            class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent hover-navbar md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 mt-1 text-white">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <section class="">
-
-        <div class="grid grid-cols-1 hidden md:grid">
-            <div class="px-4 mb-4 mt-4 flex justify-center items-center text-center">
-                <img src="../assets/images/cronograma2.jpg" alt="Cronograma">
-            </div>
-        </div>
-
-        <div class="flex justify-center items-center md:hidden">
-            <div class=" mb-4 mt-4">
-                <img src="../assets/images/cronograma.jpg" alt="Cronograma">
-            </div>
-        </div>
-
-        <div class="justify-center flex p-8">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScwkHo-BhJowiVY9SFbrU7y-q9_oC1tZRdSCeDMSflHtoj8aQ/viewform" target="_blank"
-                class="inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-5 text-center me-2 mb-2">
-                Inscribirse
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9" />
-                </svg>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-
-    <footer class="background-dark mt-4 w-full h-full">
-        <div class="mx-auto w-full max-w-screen-xl">
-            <div class="max-w-4xl mx-auto">
-                <div class="flex flex-wrap justify-between items-center">
-                    <!-- Logos aquí, cada uno dentro de un contenedor div -->
-                    <div class="m-6">
-                        <img src="../assets/images/logo_CATAGOB.png" alt="Logo CATAMARCA GOBIERNO" class="w-44 h-44">
-                    </div>
-                    <div class="m-6">
-                        <img src="../assets/images/logo_CATACAPI.png" alt="Logo CATAMARCA CAPITAL" class="w-44 h-44">
-                    </div>
-                    <div class="m-4 hidden md:block">
-                        <img src="../assets/images/logo_TRAIL.png" alt="Logo TRAIL" class="w-32 h-32">
-                    </div>
-                    <div class="m-6">
-                        <img src="../assets/images/logo_CADA.png" alt="Logo CADA" class="w-32 h-32">
-                    </div>
-                    <div class="m-6">
-                        <img src="../assets/images/logo_ASOCAT.png" alt="Logo ASOCAT" class="w-32 h-32">
+                        <div class="m-6">
+                            <img src="../assets/images/logo_CATACAPI.png" alt="Logo CATAMARCA CAPITAL"
+                                class="w-44 h-44">
+                        </div>
+                        <div class="m-4 hidden md:block">
+                            <img src="../assets/images/logo_TRAIL.png" alt="Logo TRAIL" class="w-32 h-32">
+                        </div>
+                        <div class="m-6">
+                            <img src="../assets/images/logo_CADA.png" alt="Logo CADA" class="w-32 h-32">
+                        </div>
+                        <div class="m-6">
+                            <img src="../assets/images/logo_ASOCAT.png" alt="Logo ASOCAT" class="w-32 h-32">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <p class="text-center py-4 textos-largos bg-muni">
-        Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad
-        de San
-        Fernando Del Valle de Catamarca.
-    </p>
-</main>
+        </footer>
+        <p class="text-center py-4 textos-largos bg-muni">
+            Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad
+            de San
+            Fernando Del Valle de Catamarca.
+        </p>
+    </main>
 
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-<script src="../js/index.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
