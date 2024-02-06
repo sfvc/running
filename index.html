@@ -115,61 +115,28 @@
             </div>
         </nav>
 
-        <div id="default-carousel" class="relative w-full z-0 hidden md:block" data-carousel="slide">
-            <!-- Carousel wrapper -->
-            <div class="relative overflow-hidden w-full h-96 z-0">
-                <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in absolute inset-0" data-carousel-item>
-                    <img src="./assets/images/dique1.jpeg"
-                        class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="Portada">
-                </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in absolute inset-0" data-carousel-item>
-                    <img src="./assets/images/dique2.jpeg"
-                        class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="Montaña">
-                </div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in absolute inset-0" data-carousel-item>
-                    <img src="./assets/images/dique3.jpeg"
-                        class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="Bosque">
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in absolute inset-0" data-carousel-item>
-                    <img src="./assets/images/dique4.jpeg"
-                        class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="Barco">
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in absolute inset-0" data-carousel-item>
-                    <img src="./assets/images/dique5.jpg"
-                        class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="Barco">
-                </div>
-                <!-- Item 6 -->
-                <div class="hidden duration-700 ease-in absolute inset-0" data-carousel-item>
-                    <img src="./assets/images/dique6.jpg"
-                        class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="Barco">
-                </div>
+        <div class="flex justify-center items-center">
+            <img class="h-full w-full object-fit md:hidden" src="./assets/images/portada2.jpg" alt="">
+        </div>
+
+        <div class="w-full z-0">
+            <div class="w-full h-full z-0 hidden md:block">
+                <img src="./assets/images/portada.jpg" alt="Portada">
             </div>
         </div>
-        </section>
 
         <section class="bg-white dark:bg-gray-900">
             <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
                 <h1
-                    class="mt-8 mb-4 flex justify-center items-center text-center text-2xl md:text-5xl rainbow-text-inverse">
+                    class="mt-4 mb-4 flex justify-center items-center text-center text-2xl md:text-5xl rainbow-text-inverse">
                     INSCRIPCIONES ABIERTAS
                 </h1>
                 <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
                     Los 3 primeros clasificados seran parte del equipo nacional de Trail.</p>
-                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                <div class="flex flex-col flex-wrap space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7mDS7C7iX5wrhOY-0ZhcVHJKWj3IS_efLHQs5y2MFhP-Mog/viewform"
                         target="_blank"
-                        class="inline-flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-5 text-center me-2 mb-2">
+                        class="inline-flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-5 text-center me-2">
                         Inscribirse
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -177,13 +144,23 @@
                                 d="M1 5h12m0 0L9 1m4 4L9 9" />
                         </svg>
                     </a>
+                    <a href="./pages/inscripciones.html"
+                        class="inline-flex items-center justify-center text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-5 text-center me-2">
+                        Inscripciones
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <div class="w-full z-0">
-            <div class="w-full h-full z-0 hidden md:block mb-4">
-                <img src="./assets//images/portada.jpg" alt="Portada">
+        <div class="w-full z-0 hidden md:block mb-6">
+            <div class="relative inset-0">
+                <img src="./assets/images/dique6.jpg" class="block w-full h-96 object-cover" alt="Dique">
             </div>
         </div>
 
