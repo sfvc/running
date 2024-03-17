@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nahuel Soria Parodi">
     <!-- favicon -->
-    <link rel="shortcut icon" type="./image/png" href="./assets/images/logo_TRAIL.png">
+    <link rel="shortcut icon" type="./image/png" href="./assets/images/logo_laCapitalTrail.png">
     <!-- TailwindCSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <!-- CSS -->
@@ -101,7 +101,7 @@
             </div>
         </nav>
 
-        <div id="default-carousel" class="relative w-full z-0 hidden md:block" data-carousel="slide">
+        <div id="default-carousel" class="relative w-full z-0" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative overflow-hidden w-full h-96 z-0">
                 <div class="hidden duration-700 ease-in absolute inset-0" data-carousel-item>
@@ -155,33 +155,46 @@
             El Jumeal - Catamarca
         </h2>
 
-        <h3 class="text-center mt-4 rainbow-text text-3xl">
+        <h3 id="countdown-message" class="text-center mt-4 rainbow-text text-3xl">
             Tiempo restante para la carrera
         </h3>
 
         <div class="flex gap-8 justify-center mt-4 mb-6 flex-wrap">
-            <div class="bg-white p-4 rounded-md shadow-md flex  w-64 flex-col items-center">
-                <span id="days" class="ml-2 text-9xl text-blue-500">62</span>
-                <span class="font-bold">Días</span>
-            </div>
-            <div class="bg-white p-4 rounded-md shadow-md flex flex flex-col items-center w-64">
-                <span id="hours" class="ml-2 text-blue-500 text-9xl">8</span>
-                <span class="font-bold">Horas</span>
-            </div>
-            <div class="bg-white p-4 rounded-md shadow-md flex flex-col items-center  w-64">
-                <span id="minutes" class="ml-2 text-blue-500 text-9xl">24</span>
-                <span class="font-bold">Minutos</span>
-            </div>
-            <div class="bg-white p-4 rounded-md shadow-md flex flex-col  items-center  w-64">
-                <span id="seconds" class="ml-2 text-blue-500 text-9xl">56</span>
-                <span class="font-bold">Segundos</span>
+            <div id="countdown-container">
+                <div id="countdown" class="flex flex-wrap justify-center gap-8">
+                    <div class="bg-white p-4 rounded-md shadow-md flex flex-col items-center w-48">
+                        <span id="days" class="ml-2 text-9xl text-blue-500">62</span>
+                        <span class="font-bold">Días</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-md flex flex-col items-center w-48">
+                        <span id="hours" class="ml-2 text-blue-500 text-9xl">8</span>
+                        <span class="font-bold">Horas</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-md flex flex-col items-center w-48">
+                        <span id="minutes" class="ml-2 text-blue-500 text-9xl">24</span>
+                        <span class="font-bold">Minutos</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-md flex flex-col items-center w-48">
+                        <span id="seconds" class="ml-2 text-blue-500 text-9xl">56</span>
+                        <span class="font-bold">Segundos</span>
+                    </div>
+                </div>
+                <div id="event-message"
+                    class="bg-yellow-500 text-white p-6 rounded-md shadow-md mt-4 text-center rainbow-text-inverse">
+                    <p class="font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Hoy es el día de la carrera!!!</p>
+                </div>
+                <div id="event-past-message" class="bg-indigo-500 text-white p-6 rounded-md shadow-md mt-4 text-center"
+                    style="display: none;">
+                    <p class="font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl">La carrera ya termino. <br> <br>
+                        Gracias por acompañarnos!</p>
+                </div>
             </div>
         </div>
 
         <div class="flex justify-center items-center">
             <a href="./pages/contacto.html">
                 <button type="button"
-                    class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium text-sm px-5 py-2.5 text-center me-2">Contactanos
+                    class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium text-sm px-5 py-2.5 text-center me-2 mb-6 mt-6">Contactanos
                 </button>
             </a>
         </div>
@@ -204,8 +217,7 @@
             </div>
 
             <div>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=lacapital.trail@gmail.com"
-                    target="_blank" rel="noreferrer">
+                <a href="mailto:deporteyjuventud.catamarca@gmail.com">
                     <button type="button"
                         class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">
                         <div class="flex items-center">
@@ -230,7 +242,7 @@
                     <div class="flex flex-wrap justify-between items-center">
                         <!-- Logos aquí, cada uno dentro de un contenedor div -->
                         <div class="m-4">
-                            <img src="./assets/images/logo_ASOCAT.png" alt="Logo ASOCAT" class="w-32 h-32">
+                            <img src="./assets/images/logo_ASOCAT.png" alt="Logo ASOCAR" class="w-32 h-32">
                         </div>
                         <div class="m-4">
                             <img src="./assets/images/logo_CATACAPI.png" alt="Logo CATAMARCA CAPITAL" class="w-44 h-44">
@@ -238,21 +250,16 @@
                         <div class="m-4 hidden md:block">
                             <img src="./assets/images/logo_TRAIL.png" alt="Logo TRAIL" class="w-32 h-32">
                         </div>
-                        <div class="m-4">
-                            <img src="./assets/images/logo_CATAGOB.png" alt="Logo CATAMARCA GOBIERNO" class="w-44 h-44">
-                        </div>
-                        <div class="m-4">
-                            <img src="./assets/images/logo_CADA.png" alt="Logo CADA" class="w-32 h-32">
-                        </div>
                     </div>
                 </div>
+                <hr>
+                <p class="text-center py-4 textos-largos">
+                    Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad
+                    de San
+                    Fernando Del Valle de Catamarca.
+                </p>
             </div>
         </footer>
-        <p class="text-center py-4 textos-largos bg-muni">
-            Copyright &copy; <span class="textos-largos" id="year"></span>, Municipalidad de la Ciudad
-            de San
-            Fernando Del Valle de Catamarca.
-        </p>
     </main>
 
     <script>
@@ -261,7 +268,10 @@
     <script>
         function countdown() {
             const today = new Date();
-            const targetDate = new Date('2024-03-16');
+
+            // Ajusta la fecha objetivo para el horario de Argentina (UTC-3)
+            const targetDate = new Date('2024-03-16T00:00:00-03:00');
+
             const difference = targetDate.getTime() - today.getTime();
 
             if (difference <= 0) {
@@ -269,7 +279,8 @@
                     days: 0,
                     hours: 0,
                     minutes: 0,
-                    seconds: 0
+                    seconds: 0,
+                    eventPassed: true
                 };
             } else {
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -277,17 +288,46 @@
                 const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-                return { days, hours, minutes, seconds };
+                return {
+                    days,
+                    hours,
+                    minutes,
+                    seconds,
+                    eventPassed: false
+                };
             }
         }
 
         function updateCountdown() {
             const countdownResult = countdown();
 
-            document.getElementById('days').textContent = countdownResult.days;
-            document.getElementById('hours').textContent = countdownResult.hours;
-            document.getElementById('minutes').textContent = countdownResult.minutes;
-            document.getElementById('seconds').textContent = countdownResult.seconds;
+            if (countdownResult.eventPassed) {
+                // La fecha del evento ya pasó, muestra el mensaje correspondiente
+                document.getElementById('countdown').style.display = 'none';
+                document.getElementById('event-message').style.display = 'none'; // Oculta el mensaje del evento futuro
+                document.getElementById('event-past-message').style.display = 'block'; // Muestra el mensaje del evento pasado
+                document.getElementById('countdown-message').style.display = 'none'; // Oculta el mensaje de tiempo restante
+            } else {
+                // La fecha del evento aún no ha llegado
+                if (countdownResult.days === 0) {
+                    // Es el día del evento, oculta la cuenta regresiva y el mensaje de tiempo restante
+                    document.getElementById('countdown').style.display = 'none';
+                    document.getElementById('countdown-message').style.display = 'none';
+                } else {
+                    // No es el día del evento, muestra la cuenta regresiva y el mensaje de tiempo restante
+                    document.getElementById('countdown').style.display = 'flex';
+                    document.getElementById('countdown-message').style.display = 'block';
+                }
+
+                document.getElementById('event-message').style.display = 'block';
+                document.getElementById('event-past-message').style.display = 'none'; // Oculta el mensaje del evento pasado
+
+                // Actualiza la cuenta regresiva
+                document.getElementById('days').textContent = countdownResult.days;
+                document.getElementById('hours').textContent = countdownResult.hours;
+                document.getElementById('minutes').textContent = countdownResult.minutes;
+                document.getElementById('seconds').textContent = countdownResult.seconds;
+            }
         }
 
         // Actualiza la cuenta regresiva cada segundo
